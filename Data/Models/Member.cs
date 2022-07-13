@@ -7,6 +7,7 @@ namespace Realpath.NewWebSite.Data.Models
     {
         [Key]
         public int id { get; set; }
+        public string ProfilePhotoUrl { get; set; }
         [Required]
         public string name { get; set; }
         [Required]

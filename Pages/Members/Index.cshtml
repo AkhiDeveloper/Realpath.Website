@@ -12,18 +12,25 @@
 </p>
 
 <!--Board of Directors-->
+@foreach(var item in Model.Member)
+{
+<section>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="@item.ProfilePhotoUrl" />
+            <p>@item.name</p>
+        </div>        
+    </div>
+</section>
+
+
+<!--Members-->
 <section>
     <div class="row">
 
     </div>
 </section>
-
-<!--Members-->
-<section>
-    <div>
-
-    </div>
-</section>
+}
 
 <table class="table">
     <thead>
