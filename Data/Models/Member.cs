@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Realpath.NewWebSite.Data.Models
 {
@@ -12,6 +13,9 @@ namespace Realpath.NewWebSite.Data.Models
         public Designation designation { get; set; }
         public Address address { get; set; }
         public ContactDetail contactDetail { get; set; }
+
+        [DefaultValue(false)]
+        public bool isBOD { get; set; }
     }
 
     
