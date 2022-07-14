@@ -5,34 +5,109 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@*<h1>Members</h1>*@
 
-<p>
+@*<p>
     <a asp-page="Create">Create New</a>
-</p>
+</p>*@
 
 <!--Board of Directors-->
-@foreach(var item in Model.Member)
-{
-<section>
-    <div class="row">
-        <div class="col-md-3">
-            <img src="@item.ProfilePhotoUrl" />
-            <p>@item.name</p>
-        </div>        
-    </div>
+<section class="text-center text-black bgcolor-grey">
+    <h1>Board of Directors</h1>
 </section>
-
+<div class="container-fluid bgcolor-pborder">
+    <div class="d-flex align-content-between">
+        @foreach(var item in Model.Member.Where(x=> x.isBOD == true).ToList())
+{
+    <section class="">
+        <div class="card bgcolor-orange m-3" style="width:300px">
+            <img class="card-img-top p-3" src="@item.ProfilePhotoUrl" alt="" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">@item.name</h4>
+                <p class="card-text">@item.designation.Name</p>
+                <a href="#" class="btn btns-login">See Profile</a>
+            </div>
+        </div>
+    </section>
+    
+}
+    </div>
+    
+</div>
 
 <!--Members-->
-<section>
-    <div class="row">
-
-    </div>
+<section class="text-center text-black bgcolor-grey">
+    <h1>Members</h1>
 </section>
+<div class="container-fluid bgcolor-pborder">
+    <div class="d-flex align-content-between">
+        @foreach(var item in Model.Member.Where(x=> x.isBOD == false).ToList())
+{
+    <section class="">
+        <div class="card bgcolor-orange m-3" style="width:300px">
+            <img class="card-img-top p-3" src="@item.ProfilePhotoUrl" alt="" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">@item.name</h4>
+                <p class="card-text">@item.designation.Name</p>
+                <a href="#" class="btn btns-login">See Profile</a>
+            </div>
+        </div>
+    </section>
+    
 }
+    </div>    
+</div>
 
-<table class="table">
+<!--Contact form-->
+<section class="bg-black text-light text-center">
+    <h1 class="py-5">Contact</h1>
+    <form class="text-start">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group px-3 pb-3">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control" id="GuestName" aria-describedby="emailHelp" placeholder="Full Name">
+                </div>
+                <div class="form-group px-3 pb-3">
+                    <label for="exampleInputPassword1">Position</label>
+                    <input type="text" class="form-control" id="GuestPosition" placeholder="">
+                </div>
+                <div class="form-group px-3 pb-3">
+                    <label for="exampleInputPassword1">Addrress</label>
+                    <input type="text" class="form-control" id="GuestAddress" placeholder="">
+                </div>
+             </div>
+             <div class="col-md-4">
+                 <div class="form-group px-3 pb-3">
+                    <label for="exampleInputEmail1">Company</label>
+                    <input type="text" class="form-control" id="GuestCompany" aria-describedby="" placeholder="">
+                </div>
+                <div class="form-group px-3 pb-3">
+                    <label for="exampleInputPassword1">Phone Number</label>
+                    <input type="text" class="form-control" id="GuestPhoneNumber" placeholder="">
+                </div>
+                <div class="form-group px-3 pb-3">
+                    <label for="exampleInputPassword1">Email Address</label>
+                    <input type="text" class="form-control" id="GuestEmailAddress" placeholder="">
+                </div>
+             </div>
+             <div class="col-md-4">
+                 <div class="form-group px-3 pb-3">
+                    <label for="exampleInputEmail1">Message</label>
+                    <input style="height:200px" type="text" class="form-control" id="GuestMessage" aria-describedby="" placeholder="Your Message to us">
+                </div>
+             </div>
+        </div>
+        <div class="row">
+            <div class="text-center mb-3 pt-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div> 
+        </div>      
+        </form>
+</section>
+
+
+@*<table class="table">
     <thead>
         <tr>
             <th>
@@ -55,4 +130,4 @@
         </tr>
 }
     </tbody>
-</table>
+</table>*@

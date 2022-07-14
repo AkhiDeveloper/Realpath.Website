@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Realpath.NewWebSite.Data;
 using Realpath.NewWebSite.Data.Models;
 
-namespace Realpath.NewWebSite.Pages.Members
+namespace Realpath.NewWebSite.Pages.Services
 {
     public class IndexModel : PageModel
     {
@@ -19,13 +19,13 @@ namespace Realpath.NewWebSite.Pages.Members
             _context = context;
         }
 
-        public IList<Member> Member { get;set; } = default!;
+        public IList<Service> Service { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
-            if (_context.members != null)
+            if (_context.services != null)
             {
-                Member = await _context.members.Include(x=>x.designation).ToListAsync();
+                Service = await _context.services.ToListAsync();
             }
         }
     }

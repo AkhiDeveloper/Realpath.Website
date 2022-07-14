@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Realpath.NewWebSite.Data;
 
@@ -11,9 +12,10 @@ using Realpath.NewWebSite.Data;
 namespace Realpath.NewWebSite.Migrations
 {
     [DbContext(typeof(RealpathNewWebSiteContext))]
-    partial class RealpathNewWebSiteContextModelSnapshot : ModelSnapshot
+    [Migration("20220714065944_mig14072022")]
+    partial class mig14072022
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
