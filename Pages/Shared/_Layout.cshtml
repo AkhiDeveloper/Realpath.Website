@@ -7,29 +7,99 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/CustomStyle.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/CustomResponsive.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Realpath.NewWebSite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
+
+
+
 <body>
-    <header>
-        <div class="d-flex align-items-center justify-content-between pull-right w-lg-100 nav-pills">
-            <div class="container d-flex align-items-center mb-3 mb-lg-0">
-                <div class="type--md__regular text-white mr-3 p-10" style="padding:10px">
-                    <a href="https://nlk.org.np/forms-syllabus" style="padding:10px;">+977-0156424</a> 
-                    <a href="https://nlk.org.np/contact" style="padding:10px;">company@gmail.com</a>
-                    <a href="https://nlk.org.np/contact" style="padding:10px;">Sun-Fri 10:00am - 5:00pm</a>
+    <div class="page-wrapper">
+        <!--New Header (main-header header-style-two)-->
+        <header class="main-header header-style-two">
+            <!--Header Top-->
+            <div class="header-top-two">
+                <div class="auto-container">
+                    <div class="clearfix">
+                        
+                        <div class="top-left">
+                            <ul class="clearfix">
+                                <!--Social Media Links-->
+                                <li>
+                                    <div class="social-links">
+                                        <a href="#">
+                                            <span class="fa fa-facebook-f">
+                                            </span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="fa fa-youtube"></span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <!--Address-->
+                                <li>
+                                    <span class="icon fa fa-map-marker" aria-hidden="true"></span>
+                                    Imadol-10, Lalitpur, Bagmati Pardesh, Nepal
+                                </li>
+                                <!--Contacts-->
+                                <li>
+                                    <span class="icon fa fa-phone"></span>
+                                    +91-984532160
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="top-right clearfix">
+                            <ul class="clearfix">
+                                <!--Guest Mode Dropdown Menu-->
+                                <li class="language dropdown">
+                                    <a class="btn btn-default dropdown-toggle" id="SiteMode_1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                                        Guest Mode
+                                        <span class=icon fa fa-angle-down></span>
+                                    </a>
+                                    <ul class="dropdown-menu style-one" aria-labelledby="SiteMode_1">
+                                        <li>
+                                            <a href="#">Office Mode</a> 
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-           </div>
-      </div>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            </div>
+            <!--Header Upper-->
+            <div class="header-upper">
+                <div class="auto-container">
+                    <div class="clearfix">
+                        <!--Company Logo-->
+                        <div class="d-flex justify-content-center logo-outer pb-3">
+                            <div class="logo">
+                                <a asp-area="" asp-page="Index">
+                                    <span>
+                                        <img src="/RealPath Logo 2.png" alt="" title=""/>
+                                        <span style="font-size:x-large;color:white">Realpath Engineering Consultancy Pvt. Ltd.</span>
+                                    </span>                                                                       
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a asp-area="" asp-page="/Index"><img src="~/Realpath.png" alt="Company Logo" style="width:80px;" class="" /></a>
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Realpath Engineering <br />Consultancy Pvt. Ltd.</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">About Us</a>
                         </li>
@@ -49,8 +119,52 @@
                 </div>
                 
             </div>
-        </nav>
-    </header>
+         </nav>
+
+            <!--Header Lower-->
+            @*<div class="header-lower">
+                <div class="auto-container">
+                    <div class="nav-outer clearfix">
+                        <nav class="main-menu">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li class="current dropdown">
+                                        <a asp-area="" asp-page="/Index">Home</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a asp-area="" asp-page="/Index">Abot Us</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a asp-area="" asp-page="/Index">Services</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a asp-area="" asp-page="/Index">Projects</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a asp-area="" asp-page="/Index">Contact Us</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>*@
+         
+
+            
+        </header>
+    </div>
+    
+
+   
     <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()

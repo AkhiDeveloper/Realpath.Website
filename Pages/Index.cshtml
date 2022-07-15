@@ -7,7 +7,7 @@
 
 
 
-<section class="bg-dark">
+@*<section class="bg-dark">
 <!-- Carousel -->
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
@@ -20,7 +20,7 @@
   
     <!-- The slideshow/carousel -->
     <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div class="carousel-item active" style=" max-height=300px">
         <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" alt="Los Angeles" class="d-block" style="width:100%">
         <div class="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
@@ -28,7 +28,7 @@
             <button type="button" class="btn btn-primary">Learn More</button>
         </div>
     </div>
-    <div class="carousel-item" style="max-height:500px">
+    <div class="carousel-item" style="max-height:300px">
       <img src="~/sample image.jpg" alt="Chicago" class="d-block" style="width:100%">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
@@ -36,7 +36,7 @@
         <button type="button" class="btn btn-primary">Learn More</button>
       </div>
     </div>
-    <div class="carousel-item" style="max-height:500px">
+    <div class="carousel-item" style="max-height:300px">
       <img src="~/sample image.jpg" alt="New York" class="d-block" style="width:100%">
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
@@ -76,10 +76,71 @@
             
         </div>
     </div>
+</section>*@
+
+<section class="welcome-section">
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <h2>
+                Welcome to <span style="color:chocolate">Realpath Engineering Consultancy</span>
+            </h2>
+        </div>
+        <div class="row clearfix">
+            @for(int i=1; i<=3;i++)
+            {           
+            <div class="services-block-two col-md-4 col-sm-6 col-xs-12">
+                <div class="inner-box">
+                    <div class="image">
+                        <a asp-page="/Services/Index">
+                            <img src="/sample image.jpg" alt=""/>
+                        </a>
+                    </div>
+                    <div class="lower-content">
+                        <h3>
+                            <a href="#">Airport Design</a>
+                        </h3>
+                        <div class="text">
+                            Costs are closely monitored construction and you receive a monthly report, including your contingency balance...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+       <div class="d-flex" style="position:relative;justify-content:center;">
+           <button class="btn-primary py-2" style="width:100px;">More</button>
+       </div>
+    </div>
+
 </section>
 
+<!--Projects Sections-->
+<section class="project-section fullwidth-galley padd-bottom-50">
+    <div class="auto-container">
+        <!--Project Title-->
+        <div class="sec-title light">
+            <h2>
+                Our Projects
+            </h2>
+        </div>
+        <!--Sortable Gallery-->
+        <div class="mixitup-gallery">
+            <div class="auto-container position-relative">
+                <div class="filters style-two clearfix">
+                    <ul class="filter-tabs filter-btn">
+                        <li class="filter active" data-role="button" data-filter="all">Airport</li>
+                        @for(int i=1;i<=4;i++)
+                        {
+                            <li class="filter active" data-role="button" data-filter="all">Airport</li>
+                        }                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!--Contact form-->
-<section class="bg-black text-light text-center">
+@*<section class="bg-black text-light text-center">
     <h1 class="py-5">Contact</h1>
     <form class="text-start">
         <div class="row">
@@ -124,7 +185,7 @@
             </div> 
         </div>      
         </form>
-</section>
+</section>*@
 
 
 
