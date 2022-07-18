@@ -1,0 +1,3 @@
+﻿.spin, .spin span {
+    animation: rotation 5s infinite linear;
+}

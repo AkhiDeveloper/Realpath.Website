@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="~/css/CustomStyle.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/CustomResponsive.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Realpath.NewWebSite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/SliderSheet.css" asp-append-version="true" />
+     <link rel="stylesheet" href="~/css/Animation.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -76,14 +78,16 @@
                     <div class="clearfix">
                         <!--Company Logo-->
                         <div class="d-flex justify-content-center logo-outer pb-3">
-                            <div class="logo">
                                 <a asp-area="" asp-page="Index">
-                                    <span>
-                                        <img src="/RealPath Logo 2.png" alt="" title=""/>
-                                        <span style="font-size:x-large;color:white">Realpath Engineering Consultancy Pvt. Ltd.</span>
-                                    </span>                                                                       
+                                    <div class="logo">
+                                        <div class="logo-image spin">
+                                            <img src="/RealPath Logo 2.png" alt="" title="" />
+                                        </div>
+                                        <div class="logo-text spin">
+                                            <p class="spin" style="font-size:x-large;color:white; text-transform: uppercase"><span>R</span>ealpath Engineering Consultancy Pvt. Ltd.</p>
+                                        </div>
+                                     </div>
                                 </a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -95,10 +99,10 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="main-menu navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navigation navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="" asp-area="" asp-page="/Index">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Index">About Us</a>
@@ -119,51 +123,9 @@
                 </div>
                 
             </div>
-         </nav>
-
-            <!--Header Lower-->
-            @*<div class="header-lower">
-                <div class="auto-container">
-                    <div class="nav-outer clearfix">
-                        <nav class="main-menu">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            <div class="navbar-collapse collapse clearfix">
-                                <ul class="navigation clearfix">
-                                    <li class="current dropdown">
-                                        <a asp-area="" asp-page="/Index">Home</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a asp-area="" asp-page="/Index">Abot Us</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a asp-area="" asp-page="/Index">Services</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a asp-area="" asp-page="/Index">Projects</a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a asp-area="" asp-page="/Index">Contact Us</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>*@
-         
-
-            
+         </nav>            
         </header>
     </div>
-    
-
    
     <div class="container-fluid">
         <main role="main" class="pb-3">
@@ -171,15 +133,141 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Realpath Consultancy Pvt. Ltd. - <a asp-area="" asp-page="/Privacy">Privacy</a>
+   </body>
+
+    <footer class="main-footer-two">
+        <div class="auto-container">
+            <!-- info section -->
+            @*<div class="info-section">
+                <div class="row">
+                    <div class="left-column col-md-4 col-sm-12">
+                        <div class="inner-box">
+                            <div class="icon-box"><span class="flaticon-maps-and-flags"></span></div>
+                            <h4>Emergency Work?</h4>
+                            <h2>+44 567 89012</h2>
+                        </div>
+                                                       
+                    </div>
+                    <div class="right-column col-md-8 col-sm-12">
+                        <div class="clearfix">
+                            <div class="pull-left"><h4>Newsletter Subscribe</h4></div>
+                            <div class="pull-left form-column">
+                                <form action="#" class="subscribe-form">
+                                    <input type="email" placeholder="Email Address ...">
+                                    <button class="thm-btn btn-style-one">Subscribe Us</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+            <!--Widgets Section-->
+            <div class="widgets-section">
+                <div class="row clearfix">
+                
+                    <!--Big Column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget-two logo-widget">
+                                    <div class="footer-logo"><figure><a href="index.html"><img src="" alt=""></a></figure></div>
+                                    <div class="widget-content">
+                                        <div class="text">Builder HUB is  international construction services company and is a leading builder in diverse market segments. With a staff of  5,200 employees.</div>
+                                    </div>
+                                    <ul>
+                                        <li><span class="icon flaticon-travel"></span>Address : Brixal Construction, Newyork 10012, USA</li>
+                                        <li><span class="icon flaticon-technology-1"></span>+44 567 890123 <br> Info@example.com</li>
+                                        <li><span class="icon flaticon-clock"></span>Mon - Sat 8.00 - 18.00 <br> Sunday CLOSED</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget-two links-widget-two">
+                                    <h2>Usefull links</h2>
+                                    <ul class="links">
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Our Services</a></li>
+                                        <li><a href="#">Request Quote</a></li>
+                                        <li><a href="#">Our Projects</a></li>
+                                        <li><a href="#">Client Reviews</a></li>
+                                        <li><a href="#">Latest News</a></li>
+                                        <li><a href="#">Private Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!--Big Column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget-two news-widget-two">
+                                    <h2>Latest News</h2>
+                                    <ul class="links">
+                                        <li><p>7 December,2021</p><h5>Planning large family gathering</h5></li>
+                                        <li><p>24 April, 2017</p><h5>Tankless water heating: Gas</h5></li>
+                                        <li><p>05 February, 2017</p><h5>Best residential plumbing award</h5></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget-two working-hour-widget">
+                                    <h2>Working Hours</h2>
+                                    <ul>
+                                        <li>Mon to Friday  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      :  &nbsp;&nbsp;&nbsp;&nbsp;    09 am - 06 pm</li>
+                                        <li>Satday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     10 am - 04 pm</li>
+                                        <li>Sunday  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="theme_color">Closed</span></li>
+                                    </ul>
+                                    <div class="discount">
+                                        <h4>Get <span>25%</span> Discount</h4>
+                                        <p>On Gas Line Service</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!--Footer Bottom-->
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="column col-md-6 col-sm-12 col-xs-12">
+                          <div class="copyright">Copyright © @DateTime.Now.Year.ToString() <a href="#">Brixal Construction</a>, All Right Reserved</div>
+                    </div>
+                    <!--Social Column-->
+                    <div class="social-column col-md-6 col-sm-12 col-xs-12">
+                        <ul class="social-icon-two">
+                            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

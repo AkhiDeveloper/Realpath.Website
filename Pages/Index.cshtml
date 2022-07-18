@@ -78,6 +78,34 @@
     </div>
 </section>*@
 
+<!--Intro Slider-->
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  @for(int i=0;i<3;i++)
+    {
+        <div class="mySlides fade">
+            <div class="numbertext">@i.ToString() / 3</div>
+            <img src="~/sample image.jpg" style="width:100%; height: 100px">
+            <div class="text">Caption Text</div>
+        </div>
+    }
+    
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
 <section class="welcome-section">
     <div class="auto-container">
         <div class="sec-title centered">
@@ -108,10 +136,9 @@
             }
         </div>
        <div class="d-flex" style="position:relative;justify-content:center;">
-           <button class="btn-primary py-2" style="width:100px;">More</button>
+           <button class="btn-style-one">More</button>
        </div>
     </div>
-
 </section>
 
 <!--Projects Sections-->
@@ -123,22 +150,128 @@
                 Our Projects
             </h2>
         </div>
-        <!--Sortable Gallery-->
-        <div class="mixitup-gallery">
-            <div class="auto-container position-relative">
-                <div class="filters style-two clearfix">
-                    <ul class="filter-tabs filter-btn">
+    </div>
+    <!--Sortable Gallery-->
+    <div class="mixitup-gallery">
+        <div class="auto-container position-relative">
+            <div class="filters style-two clearfix">
+                <ul class="filter-tabs filter-btn">
+                    <li class="filter active" data-role="button" data-filter="all">Airport</li>
+                    @for(int i=1;i<=3;i++)
+                    {
                         <li class="filter active" data-role="button" data-filter="all">Airport</li>
-                        @for(int i=1;i<=4;i++)
-                        {
-                            <li class="filter active" data-role="button" data-filter="all">Airport</li>
-                        }                       
-                    </ul>
+                    }                       
+                </ul>
+            </div>
+        </div>
+        <div class="filter-list clearfix" id="MixItUpC2F288" style="margin: 0 10px 0 0">
+            @for(int i=0;i<5;i++)
+            {
+                <!--Gallery Item Three-->
+            <div class="gallery-item-three mix all" style="display: inline-block;">
+                <div class="inner-box">
+                    <div class="image">
+                        <img src="~/sample image.jpg" alt="">
+                        <div class="overlay-box">
+                            <div class="option-box">
+                                <a href="services-single.html" class="image-link"><span class="icon fa fa-link"></span></a>
+                            </div>
+                            <div class="content">
+                                <h3><a href="#">Building Construction</a></h3>
+                                <div class="category">House, Repair</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }               
+        </div>
+        <div class="d-flex" style="position:relative;justify-content:center; margin-top: 20px">
+           <button class="btn-style-one">More</button>
+       </div>
+    </div>
+</section>
+
+<!--About Us Section-->
+<section class="about-section">
+    <div class="auto-container">
+        <div class="row clearfix">
+            <!--Column-->
+            <div class="about-column col-md-8 col-sm-12 col-xs-12">
+                <!--Sec Title-->
+                <div class="sec-title">
+                    <h2>Know About Us</h2>
+                </div>
+                <div class="row clearfix">
+                    <div class="inner-image-column col-md-4 col-sm-5 col-xs-12">
+                        <div class="image">
+                            <img src="~/about.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="inner-content-column col-md-8 col-sm-7 col-xs-12">
+                        <div class="text">
+                            <p>When you give to Our Industry, know your donation is making a difference whether you are supporting our signature Programs or our carefully curated list of gifts that professional.</p>
+                            <h3>History in Words</h3>
+                            <p>We partner with over 320 amazing seds projects worldwide, and have given over million in cash &amp; product grants to other groups since 2015 our own dynamic suite.</p>
+                            <p>There anyone who loves or pursues or desires to obtain pain of it is because seds all occasionally circumstances.</p>
+                        </div>
+                        <a href="about.html" class="theme-btn btn-style-one">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!--Column-->
+            <div class="quote-column col-md-4 col-sm-12 col-xs-12">
+                <div class="inner-column">
+                    <!--Sec Title-->
+                    <div class="sec-title centered">
+                        <h2>Request for Quote</h2>
+                    </div>
+                        
+                    <!-- Default Form -->
+                    <div class="default-form">
+                        <!--Comment Form-->
+                        <form method="post" action="email.php">
+                                
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required="">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email Address" required="">
+                            </div>
+                                
+                            <div class="form-group">
+                                <select name="services" class="custom-select-box" id="ui-id-1" style="display: none;">
+                                    <option disabled="disabled" selected="">Subject</option>
+                                    <option value="Building Construction">Building Construction</option>
+                                    <option value="House Roomodel">House Roomodel</option>
+                                    <option value="Interior Design">Interior Design</option>
+                                    <option value="Renovation">Renovation</option>
+                                    <option value="OutField Digging">OutField Digging</option>
+                                    <option value="Road Construction">Road Construction</option>
+                                    <option value="Floors &amp; Roofs">Floors &amp; Roofs</option>
+                                    <option value="Plumbing">Plumbing</option>
+                                    <option value="Electricity">Electricity</option>
+                                </select><span tabindex="0" id="ui-id-1-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="ui-id-1-menu" aria-haspopup="true" class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"><span class="ui-selectmenu-icon ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">Subject</span></span>
+                            </div>
+								
+                            <div class="form-group">
+                                <button class="theme-btn btn-style-one" type="submit" name="submit-form">Get a Quote</button>
+                            </div>
+                                
+                        </form>
+                    </div>
+                        
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+
+
+
 <!--Contact form-->
 @*<section class="bg-black text-light text-center">
     <h1 class="py-5">Contact</h1>
